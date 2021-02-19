@@ -1,0 +1,50 @@
+package com.cg.onlinefooddelivery.app.domain;
+
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+@Entity
+public class FoodCart {
+
+	/**
+	 * id of Food Cart
+	 */
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int id;
+	//One to one relationship
+	@OneToOne(fetch=FetchType.EAGER)
+	@JsonIgnore
+	private OrderDetail orderDetail;
+	//private Customer customer;
+	//One to many relationship
+	
+
+	public FoodCart() {
+		super();
+	}
+
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public OrderDetail getOrderDetail() {
+		return orderDetail;
+	}
+
+	public void setOrderDetail(OrderDetail orderDetail) {
+		this.orderDetail = orderDetail;
+	}
+	
+}

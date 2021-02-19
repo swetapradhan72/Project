@@ -1,0 +1,11 @@
+package com.cg.onlinefooddelivery.app.service;
+
+import com.cg.onlinefooddelivery.app.domain.Item;
+
+public interface ItemService {
+
+	public Item addItem(Item item,int id);
+	//public Item viewItem(String id);
+	//public Item updateItem(Item item);
+	//public Item removeItem(String id);
+}

@@ -1,0 +1,34 @@
+package com.cg.onlinefooddelivery.app.service;
+
+import com.cg.onlinefooddelivery.app.domain.OrderDetail;
+import com.cg.onlinefooddelivery.app.exception.OrderNotFoundException;
+
+public interface OrderDetailService {
+	
+	/**
+	 * this method is used for saving order details in database
+	 * @param orderDetail
+	 * @return saved order detail
+	 * @throws OrderNotFoundException 
+	 */
+	OrderDetail SaveOrUpdate(OrderDetail orderDetail) throws OrderNotFoundException;
+	/**
+	 * this method is for finding all Order related Details
+	 * @return all order details
+	 */
+	Iterable<OrderDetail> getAllOrderDetails();
+	/**
+	 * this method is for finding order details by id
+	 * @param id
+	 * @return
+	 * @throws OrderNotFoundException 
+	 */
+	 OrderDetail findById(String orderNo) throws OrderNotFoundException;
+	/**
+	 * this method is for deleting the order Details by id
+	 * @param id
+	 * @throws OrderNotFoundException 
+	 */
+	void deleteOrderDetailsById(String orderNo) throws OrderNotFoundException;
+
+}

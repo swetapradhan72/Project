@@ -1,0 +1,18 @@
+package com.cg.onlinefooddelivery.app.serviceimpl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.cg.onlinefooddelivery.app.domain.FoodCart;
+import com.cg.onlinefooddelivery.app.domain.Item;
+import com.cg.onlinefooddelivery.app.repository.FoodCartRepository;
+import com.cg.onlinefooddelivery.app.service.FoodCartService;
+
+public class FoodCartServiceImpl implements FoodCartService {
+
+	@Autowired
+	private FoodCartRepository foodCartRepository;
+	
+	public FoodCart saveCart(FoodCart cart,Item item) {
+		return null;
+	}
+}

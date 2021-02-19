@@ -1,0 +1,27 @@
+package com.cg.onlinefooddelivery.app.serviceimpl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cg.onlinefooddelivery.app.domain.FoodCart;
+import com.cg.onlinefooddelivery.app.repository.FoodCartRepository;
+
+@Service
+public class FoodCartServiceImpl {
+
+	@Autowired
+	private FoodCartRepository cartRepository;
+	
+	public FoodCart saveOrUpdate(FoodCart cart) {
+		return cartRepository.save(cart);
+	}
+	
+	public FoodCart findByOrderNo(String orderNo) {
+		FoodCart cart= cartRepository.findByNo(orderNo);
+		return cart;
+	}
+	public void deleteCart(String orderNo) {
+		FoodCart cart= cartRepository.findByNo(orderNo);
+		 cartRepository.deleteByNo(orderNo);
+	}
+}

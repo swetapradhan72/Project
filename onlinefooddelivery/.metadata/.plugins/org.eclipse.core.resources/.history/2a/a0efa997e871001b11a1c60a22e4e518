@@ -1,0 +1,66 @@
+package com.cg.onlinefooddelivery.app.serviceimpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+import com.cg.onlinefooddelivery.app.domain.Item;
+import com.cg.onlinefooddelivery.app.exception.ResourceNotFoundException;
+import com.cg.onlinefooddelivery.app.repository.ItemRepository;
+import com.cg.onlinefooddelivery.app.service.ItemService;
+
+@Service
+public class ItemServiceImpl implements ItemService{
+	@Autowired
+	private ItemRepository itemRepository;
+
+	@Override
+	public Item saveOrUpdate(Item item) {
+		
+		item.setCategory(item.getCategory());
+		item.getCategory().setItem(item);
+		item.getCategory().setName(item.getCategory().getName());
+		
+		return itemRepository.save(item);
+		
+	}
+
+	@Override
+	public Item getItemById(int id) {
+		Item item=itemRepository.findById(id);
+		if(item==null)
+		{
+			throw new ResourceNotFoundException("Id does not exist");
+		}
+		
+		return itemRepository.findById(id);
+	}
+
+	@Override
+	public Iterable<Item> getAllItems() {
+		return itemRepository.findAll();
+	}
+
+	@Override
+	public void deleteItemById(int id) {
+		Item item=itemRepository.findById(id);
+		if(item==null)
+		{
+			throw new ResourceNotFoundException("Id does not exist");
+		}
+		
+		itemRepository.deleteById(id);
+	}
+
+	@Override
+	public List<Item> getItemByCategoryName(String name) {
+		return itemRepository.findAllItemsByCategory(name);
+	}
+	
+
+	
+	
+
+}

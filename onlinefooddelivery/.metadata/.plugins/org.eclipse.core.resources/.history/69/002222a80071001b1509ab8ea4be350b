@@ -1,0 +1,17 @@
+package com.cg.onlinefooddelivery.app.exception;
+
+public class ProjectIdExceptionResponse  {
+
+	private String orderNo;
+	public ProjectIdExceptionResponse(String orderNo) {
+		this.orderNo = orderNo;
+	}
+	public String getOrderNo() {
+		return orderNo;
+	}
+	public void setOrderNo(String orderNo) {
+		this.orderNo = orderNo;
+	}
+
+	
+}

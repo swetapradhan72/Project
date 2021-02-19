@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.cg.onlinefooddelivery.app.service.ItemService"/>
+    <fullyQualifiedTypeName name="org.hibernate.transform.CacheableResultTransformer"/>
+    <fullyQualifiedTypeName name="javax.validation.constraints.Pattern"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="org.springframework.data.repository.CrudRepository"/>
+    <fullyQualifiedTypeName name="com.cg.onlinefooddelivery.app.service.FoodCartService"/>
+    <fullyQualifiedTypeName name="com.cg.onlinefooddelivery.app.repository.ItemRepository"/>
+    <fullyQualifiedTypeName name="com.cg.onlinefooddelivery.app.domain.Item"/>
+    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+    <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
+    <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonIgnore"/>
+    <fullyQualifiedTypeName name="javax.persistence.FetchType"/>
+    <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
+    <fullyQualifiedTypeName name="javax.persistence.OneToOne"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+    <fullyQualifiedTypeName name="com.cg.onlinefooddelivery.app.domain.Category"/>
+    <fullyQualifiedTypeName name="com.cg.onlinefooddelivery.app.exception.ResourceNotFoundException"/>
+    <fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
+    <fullyQualifiedTypeName name="com.cg.onlinefooddelivery.app.serviceimpl.ItemServiceImpl"/>
+    <fullyQualifiedTypeName name="javax.persistence.Column"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="com.cg.onlinefooddelivery.app.serviceimpl.FoodCartServiceImpl"/>
+    <fullyQualifiedTypeName name="com.cg.onlinefooddelivery.app.repository.FoodCartRepository"/>
+    <fullyQualifiedTypeName name="com.cg.onlinefooddelivery.app.domain.FoodCart"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+</qualifiedTypeNameHistroy>

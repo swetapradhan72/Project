@@ -1,0 +1,19 @@
+package com.cg.onlinefooddelivery.app.domain;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class FoodCart {
+
+	/**
+	 * id of Order detail
+	 */
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int id;
+	//private Customer customer;
+	//private List<Item> itemList;
+}

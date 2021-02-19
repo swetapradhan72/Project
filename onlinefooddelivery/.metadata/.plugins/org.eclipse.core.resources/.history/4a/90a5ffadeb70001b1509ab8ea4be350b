@@ -1,0 +1,13 @@
+package com.cg.onlinefooddelivery.app.service;
+
+import java.util.Optional;
+
+import com.cg.onlinefooddelivery.app.domain.OrderDetail;
+
+public interface OrderDetailService {
+	
+	OrderDetail SaveOrUpdate(OrderDetail orderDetail);
+	Iterable<OrderDetail> getAllOrderDetails();
+	Optional<OrderDetail> findById(int id);
+
+}

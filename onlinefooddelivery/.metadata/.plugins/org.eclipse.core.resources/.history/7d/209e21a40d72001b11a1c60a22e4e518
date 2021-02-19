@@ -1,0 +1,15 @@
+package com.cg.onlinefooddelivery.app.exception;
+
+public class OrderNotFoundExceptionResponse  {
+
+	private String orderNo;
+	public OrderNotFoundExceptionResponse(String orderNo) {
+		this.orderNo = orderNo;
+	}
+	public String getOrderNo() {
+		return orderNo;
+	}
+	public void setOrderNo(String orderNo) {
+		this.orderNo = orderNo;
+	}
+}

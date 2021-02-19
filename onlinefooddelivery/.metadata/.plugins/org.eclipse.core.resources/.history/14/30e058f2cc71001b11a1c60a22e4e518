@@ -1,0 +1,7 @@
+package com.cg.onlinefooddelivery.app.serviceimpl;
+
+import com.cg.onlinefooddelivery.app.service.FoodCartService;
+
+public class FoodCartServiceImpl implements FoodCartService {
+
+}

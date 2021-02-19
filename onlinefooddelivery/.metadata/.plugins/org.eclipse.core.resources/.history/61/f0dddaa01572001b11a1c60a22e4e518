@@ -1,0 +1,37 @@
+package com.cg.onlinefooddelivery.app.web;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cg.onlinefooddelivery.app.domain.FoodCart;
+import com.cg.onlinefooddelivery.app.serviceimpl.FoodCartServiceImpl;
+import com.cg.onlinefooddelivery.app.serviceimpl.MapValidationServiceImpl;
+
+@RestController
+@RequestMapping("/ofd/api/cart")
+public class ItemController {
+
+	@Autowired
+	private MapValidationServiceImpl mapValidationServiceImpl;
+	
+	@Autowired
+	private FoodCartServiceImpl cartServiceImpl;
+	
+	@PostMapping("")
+	public ResponseEntity<?> addToCart(@Valid @RequestBody FoodCart cart, BindingResult result) {
+		ResponseEntity<?> errorMap=mapValidationServiceImpl.mapValidationError(result);
+		if(errorMap!=null) {
+			return errorMap;
+		}
+	  FoodCart crt=cartServiceImpl.saveOrUpdate(cart);
+		return new ResponseEntity<FoodCart>(crt,HttpStatus.OK);
+	}
+}
